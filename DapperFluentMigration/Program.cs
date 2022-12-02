@@ -1,8 +1,15 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using DapperFluentMigration.Context;
+using DapperFluentMigration.Contracts;
+using DapperFluentMigration.Repository;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 var app = builder.Build();
+builder.Services.AddSingleton<DapperContext>();
+builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
+builder.Services.AddControllers();
 
 // Configure the HTTP request pipeline.
 
