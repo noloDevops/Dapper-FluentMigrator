@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kk+f49GIYRb09fsNaRdcG6rv2xsOwV89DgN1BL+RIZEloG3QTMtqrOb2OBAWehOEjOTiVwLwji43YreJLoIdRg==",
+  "success": true,
+  "projectFilePath": "/Users/thulo/projects/Nolo Projects/Dapper-FluentMigrator/DapperFluentMigration/DapperFluentMigration.csproj",
+  "expectedPackageFiles": [
+    "/Users/thulo/.nuget/packages/dapper/2.0.123/dapper.2.0.123.nupkg.sha512"
+  ],
+  "logs": []
+}
