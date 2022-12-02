@@ -13,6 +13,8 @@
     <None Remove="Context\" />
     <None Remove="Contracts\" />
     <None Remove="Repository\" />
+    <None Remove="sql\" />
+    <None Remove="Migration\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
@@ -23,5 +25,7 @@
     <Folder Include="Context\" />
     <Folder Include="Contracts\" />
     <Folder Include="Repository\" />
+    <Folder Include="sql\" />
+    <Folder Include="Migration\" />
   </ItemGroup>
 </Project>
