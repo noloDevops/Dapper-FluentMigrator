@@ -15,6 +15,7 @@
     <None Remove="Repository\" />
     <None Remove="sql\" />
     <None Remove="Migration\" />
+    <None Remove="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
@@ -27,5 +28,6 @@
     <Folder Include="Repository\" />
     <Folder Include="sql\" />
     <Folder Include="Migration\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
 </Project>

@@ -1,10 +1,13 @@
 ﻿using DapperFluentMigration.Context;
 using DapperFluentMigration.Contracts;
+using DapperFluentMigration.Extensions;
+using DapperFluentMigration.Migration;
 using DapperFluentMigration.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddSingleton<Database>();
 builder.Services.AddSingleton<DapperContext>();
 builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
 builder.Services.AddControllers();
@@ -12,6 +15,8 @@ builder.Services.AddControllers();
 var app = builder.Build();
 app.UseAuthentication();
 app.UseAuthorization();
+app.MigrateDatabase().Run();
+
 
 // Configure the HTTP request pipeline.
 
