@@ -14,12 +14,15 @@
     <None Remove="Contracts\" />
     <None Remove="Repository\" />
     <None Remove="sql\" />
-    <None Remove="Migration\" />
     <None Remove="Extensions\" />
+    <None Remove="FluentMigrator.Runner" />
+    <None Remove="Microsoft.Extensions.Configuration" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1" />
+    <PackageReference Include="FluentMigrator.Runner" Version="3.3.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -27,7 +30,6 @@
     <Folder Include="Contracts\" />
     <Folder Include="Repository\" />
     <Folder Include="sql\" />
-    <Folder Include="Migration\" />
     <Folder Include="Extensions\" />
   </ItemGroup>
 </Project>

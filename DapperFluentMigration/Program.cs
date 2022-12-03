@@ -1,8 +1,12 @@
-﻿using DapperFluentMigration.Context;
+﻿using System;
+using Microsoft.Extensions.Configuration;
+using DapperFluentMigration.Context;
 using DapperFluentMigration.Contracts;
 using DapperFluentMigration.Extensions;
-using DapperFluentMigration.Migration;
+using DapperFluentMigration.Migrations;
 using DapperFluentMigration.Repository;
+using FluentMigrator.Runner;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +15,11 @@ builder.Services.AddSingleton<Database>();
 builder.Services.AddSingleton<DapperContext>();
 builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
 builder.Services.AddControllers();
+builder.Services.AddLogging(c => c.AddFluentMigratorConsole())
+        .AddFluentMigratorCore()
+        .ConfigureRunner(c => c.AddSqlServer2016()
+            .WithGlobalConnectionString(GetConnectionString("SqlConnection"))
+            .ScanIn(Assembly.GetExecutingAssembly()).For.Migrations());
 
 var app = builder.Build();
 app.UseAuthentication();

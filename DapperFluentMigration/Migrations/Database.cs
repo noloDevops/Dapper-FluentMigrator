@@ -1,7 +1,7 @@
 ﻿using Dapper;
 using DapperFluentMigration.Context;
 
-namespace DapperFluentMigration.Migration
+namespace DapperFluentMigration.Migrations
 {
     public class Database
     {

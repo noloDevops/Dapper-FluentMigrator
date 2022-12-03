@@ -1,5 +1,6 @@
 ﻿using System;
-using DapperFluentMigration.Migration;
+using DapperFluentMigration.Migrations;
+using FluentMigrator.Runner;
 
 namespace DapperFluentMigration.Extensions
 {
@@ -10,9 +11,12 @@ namespace DapperFluentMigration.Extensions
             using (var scope = host.Services.CreateScope())
             {
                 var databaseService = scope.ServiceProvider.GetRequiredService<Database>();
+                var migrationService = scope.ServiceProvider.GetRequiredService<IMigrationRunner>();
                 try
                 {
                     databaseService.CreateDatabase("DapperMigrationExample");
+                    migrationService.ListMigrations();
+                    migrationService.MigrateUp();
                 }
                 catch
                 {

@@ -1,4 +1,30 @@
 ﻿<Properties StartupConfiguration="{D0B7E273-5FA8-4E46-8AEA-F6B6738ECF70}|Default">
-  <MonoDevelop.Ide.ItemProperties.DapperFluentMigration FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.DapperFluentMigration PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Migrations/InitialTables_202212030001.cs">
+    <Files>
+      <File FileName="CompaniesController.cs" Line="10" Column="63" />
+      <File FileName="Program.cs" Line="18" Column="28" />
+      <File FileName="Migration/InitialTables_202212030001.cs" Line="6" Column="52" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DapperFluentMigration" expanded="True">
+            <Node name="DapperFluentMigration" expanded="True">
+              <Node name="Migration" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
 </Properties>
